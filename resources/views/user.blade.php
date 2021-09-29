@@ -77,7 +77,7 @@
                     <td>{{$loop->iteration}}</td>
                     <td>{{$user->name}}</td>
                     <td>{{$user->email}}</td>
-                    <td>{{$user->profile_image}}</td>
+                    <td><img src="{{asset('uploads/'.$user->profile_image)}}" alt="" width="100" height="50"></td>
                 </tr>
                 @endforeach
             @endif
