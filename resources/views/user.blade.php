@@ -21,42 +21,42 @@
         <form action="{{url(app()->getLocale().'/submit-user')}}" method="post" enctype="multipart/form-data">
             @csrf
             <div class="form-group">
-                <label>Name</label>
+                <label>{{__('user.name')}}</label>
                 <input name="name" type="text" value="{{old('name')}}" class="form-control" placeholder="Name">
                 @error('name')
                 <label class="error">{{$message}}</label>
                 @enderror
             </div>
             <div class="form-group">
-                <label>Email</label>
+                <label>{{__('user.email')}}</label>
                 <input name="email" type="text" value="{{old('email')}}" class="form-control" placeholder="Email">
                 @error('email')
                 <label class="error">{{$message}}</label>
                 @enderror
             </div>
             <div class="form-group">
-                <label>Password</label>
+                <label>{{__('user.password')}}</label>
                 <input name="password" type="password" value="{{old('password')}}" class="form-control" placeholder="Password">
                 @error('password')
                 <label class="error">{{$message}}</label>
                 @enderror
             </div>
             <div class="form-group">
-                <label>Profile Image</label>
+                <label>{{__('user.profile')}}</label>
                 <input name="profile_image" type="file" class="form-control" >
                 @error('profile_image')
                 <label class="error">{{$message}}</label>
                 @enderror
             </div>
             <div class="form-group">
-                <label>Profile Image</label>
+                <label>{{__('user.images')}}</label>
                 <input name="images[]" type="file" multiple class="form-control" >
                 @error('images')
                 <label class="error">{{$message}}</label>
                 @enderror
             </div>
             <div class="form-group">
-               <button class="btn btn-primary mt-2" type="submit">Submit</button>
+               <button class="btn btn-primary mt-2" type="submit">{{__('user.submit')}}</button>
             </div>
         </form>
     </div>
@@ -65,9 +65,9 @@
             <thead>
             <tr>
                 <th>#</th>
-                <th>Name</th>
-                <th>Email</th>
-                <th>Image</th>
+                <th>{{__('user.name')}}</th>
+                <th>{{__('user.email')}}</th>
+                <th>{{__('user.profile')}}</th>
             </tr>
             </thead>
             <tbody>
